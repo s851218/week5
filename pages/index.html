@@ -8,7 +8,7 @@
 
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
   <body>
@@ -202,7 +202,7 @@
                       but it doesn’t seems to be a padding/margin. <br />What is
                       the gap or extra space below image?
                     </p>
-                    <a href="#" class="btn btn-secondary" download=""
+                    <a href="#" class="btn bg-gray100 border" download=""
                       ><span
                         class="material-symbols-outlined align-bottom me-2"
                       >
@@ -234,7 +234,9 @@
 
                       <section>
                         <a href="#" class="me-6"
-                          ><span class="material-symbols-outlined">
+                          ><span
+                            class="material-symbols-outlined icon-unfilled"
+                          >
                             star
                           </span></a
                         >
@@ -296,26 +298,115 @@
                 >
                   Reply
                 </button>
+
+                <!-- collapse -->
                 <div
                   class="collapse position-absolute bottom-0 end-0"
                   id="collapseExample"
                 >
                   <div class="card card-body align-items-end">
-                    Some placeholder content for the collapse component. This
-                    panel is hidden by default but revealed when the user
-                    activates the relevant trigger.
-                    <button
-                      class="btn btn-success"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                    >
-                      Reply
-                    </button>
+                    <!-- tool-bar -->
+                    <section class="d-flex w-100 align-items-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle fw-bold"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Body text
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item h1" href="#">Heading 1</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item h2" href="#">Heading 2</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item h3" href="#">Heading 3</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Normal</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#" class="ms-6"
+                        ><span class="material-symbols-outlined">
+                          format_bold
+                        </span></a
+                      >
+                      <a href="#" class="ms-6"
+                        ><span class="material-symbols-outlined">
+                          format_italic
+                        </span></a
+                      >
+                      <a href="#" class="ms-6"
+                        ><span class="material-symbols-outlined">
+                          list
+                        </span></a
+                      >
+                      <a href="#" class="ms-6"
+                        ><span class="material-symbols-outlined">
+                          format_list_numbered
+                        </span></a
+                      >
+                      <a href="#" class="ms-6"
+                        ><span class="material-symbols-outlined">
+                          image
+                        </span></a
+                      >
+                      <a href="#" class="ms-6"
+                        ><span class="material-symbols-outlined">
+                          attachment
+                        </span></a
+                      >
+                      <a href="#" class="ms-6"
+                        ><span class="material-symbols-outlined">
+                          code
+                        </span></a
+                      >
+                    </section>
+                    <!-- tool-bar-end -->
+
+                    <!-- comment -->
+                    <section>
+                      <textarea
+                        name="comment"
+                        id=""
+                        value="Reply an answer…"
+                        style="width: 500px; height: 200px"
+                      >
+                      </textarea>
+                      <!-- Cancle & Reply -->
+                      <div class="text-end">
+                        <button
+                          class="btn btn-outline-success"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseExample"
+                          aria-expanded="false"
+                          aria-controls="collapseExample"
+                        >
+                          Cancle
+                        </button>
+                        <button
+                          class="btn btn-success"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseExample"
+                          aria-expanded="false"
+                          aria-controls="collapseExample"
+                        >
+                          Reply
+                        </button>
+                      </div>
+                      <!-- Cancle & Reply end -->
+                    </section>
+                    <!-- comment-end -->
                   </div>
                 </div>
+                <!-- collapse-end -->
               </div>
               <!-- button-end -->
             </div>
