@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script type="module" crossorigin src="/week5/assets/main-4659f3e1.js"></script>
+    <link rel="stylesheet" href="/week5/assets/main-26e7ed8c.css">
+  </head>
+  <body>
+    <div class="d-flex">
+      <aside class="navbar bg-body-tertiary vh-100 position-fixed">
+  <div class="container-fluid flex-column align-items-start px-0 h-100">
+    <section>
+      <h1 class="ms-8">
+        <a class="navbar-brand logo" href="#">Answer</a>
+      </h1>
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item mb-4 mt-8">
+          <a class="nav-link ms-6" aria-current="page" href="#"
+            ><span class="material-symbols-outlined align-bottom me-3">
+              bar_chart_4_bars </span
+            >Dashboard</a
+          >
+        </li>
+        <li class="nav-item mb-4">
+          <a class="nav-link ms-6" href="#"
+            ><span class="material-symbols-outlined align-bottom me-3">
+              forum </span
+            >Question</a
+          >
+        </li>
+        <li class="nav-item mb-4 border-success">
+          <a class="nav-link ms-6 text-success" href="index.html"
+            ><span class="material-symbols-outlined align-bottom me-3">
+              assignment </span
+            >Assignment</a
+          >
+        </li>
+        <li class="nav-item mb-4">
+          <a class="nav-link ms-6" href="#"
+            ><span class="material-symbols-outlined align-bottom me-3">
+              video_library </span
+            >Course</a
+          >
+        </li>
+        <li class="nav-item mb-4">
+          <a class="nav-link ms-6" href="admin.html"
+            ><span class="material-symbols-outlined align-bottom me-3">
+              group </span
+            >Admin</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ms-6" href="#"
+            ><span class="material-symbols-outlined align-bottom me-3">
+              settings </span
+            >Settings</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section class="d-flex px-8">
+      <div class="flex-shrink-0">
+        <img
+          class="rounded-circle object-fit-cover"
+          src="/week5/assets/andychen-f14fef59.jpeg"
+          alt="andychen"
+          width="40"
+          height="40"
+        />
+      </div>
+      <div class="flex-grow-1 ms-3">
+        <p class="fw-bold">Andy Chen</p>
+        <a class="fs-sm text-secondary" href="mailto:andy0401@mail.com"
+          >andy0401@mail.com</a
+        >
+      </div>
+    </section>
+  </div>
+</aside>
+
+      <main class="content">
+        <!-- header -->
+        <ul
+          class="header navbar-expand-lg d-flex justify-content-between align-items-center list-unstyled mb-2"
+        >
+          <li class="d-flex">
+            <h2 class="navbar-brand fw-bold fs-4 me-8">Admin</h2>
+
+            <!-- Add New Admin Button trigger modal -->
+            <a
+              class="add-new-admin-hover"
+              href="#"
+              class="fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#add-new-admin-Modal"
+            >
+              <span
+                class="material-symbols-outlined align-bottom text-success me-2"
+              >
+                add
+              </span>
+              Add New Admin
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              ><span class="material-symbols-outlined align-bottom me-6">
+                search
+              </span></a
+            >
+
+            <a href="#"
+              ><span class="material-symbols-outlined align-bottom">
+                notifications_active
+              </span></a
+            >
+          </li>
+        </ul>
+
+        <!-- Table -->
+        <table class="table table-hover">
+          <thead>
+            <tr class="border-dark">
+              <th scope="col">
+                ID<span
+                  class="material-symbols-outlined align-bottom text-success ms-2"
+                >
+                  arrow_downward
+                </span>
+              </th>
+              <th scope="col">Name</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Verified</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- #1 -->
+            <tr>
+              <th class="py-4" scope="row">#1</th>
+              <td class="py-4">Emir Wicks</td>
+              <td class="py-4">emir.wicks@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <!-- visibility button trigger modal -->
+                <a
+                  href="#"
+                  class="me-6"
+                  style=""
+                  data-bs-toggle="modal"
+                  data-bs-target="#visibility-Modal"
+                >
+                  <span
+                    class="material-symbols-outlined align-bottom icon-link-hover-success"
+                  >
+                    visibility
+                  </span>
+                </a>
+
+                <!-- edit button trigger modal -->
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#edit-admin-Modal"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <!-- #2 -->
+            <tr>
+              <th class="py-4" scope="row">#2</th>
+              <td class="py-4">Zaina Goldsmith</td>
+              <td class="py-4">zaina.goldsmith@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <tr>
+              <!-- #3 -->
+              <th class="py-4" scope="row">#3</th>
+              <td class="py-4">Mahima Lopez</td>
+              <td class="py-4">mahima.lopez@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <!-- #4 -->
+            <tr>
+              <th class="py-4" scope="row">#4</th>
+              <td class="py-4">Pharrell Murray</td>
+              <td class="py-4">pharrell.murray@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <!-- #5 -->
+            <tr>
+              <th class="py-4" scope="row">#5</th>
+              <td class="py-4">Annika Mcbride</td>
+              <td class="py-4">annika.mcbride@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <!-- #6 -->
+            <tr>
+              <th class="py-4" scope="row">#6</th>
+              <td class="py-4">Fatimah Clark</td>
+              <td class="py-4">fatimah.clark@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <!-- #7 -->
+            <tr>
+              <th class="py-4" scope="row">#7</th>
+              <td class="py-4">Klaudia Rhodes</td>
+              <td class="py-4">klaudia.rhodes@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <!-- #8 -->
+            <tr>
+              <th class="py-4" scope="row">#8</th>
+              <td class="py-4">Tillie Lucero</td>
+              <td class="py-4">tillie.lucero@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <!-- #9 -->
+            <tr>
+              <th class="py-4" scope="row">#9</th>
+              <td class="py-4">Sabrina Stephenson</td>
+              <td class="py-4">sabrina.stephenson@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+            <!-- #10 -->
+            <tr>
+              <th class="py-4" scope="row">#10</th>
+              <td class="py-4">Annie Smith</td>
+              <td class="py-4">annie.smith@mail.com</td>
+              <td class="py-4">Yes</td>
+              <td class="py-4 d-flex justify-content-end">
+                <a href="#" class="me-6">
+                  <span class="material-symbols-outlined align-bottom">
+                    visibility
+                  </span>
+                </a>
+                <a href="#"
+                  ><span class="material-symbols-outlined align-bottom">
+                    edit
+                  </span></a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- paginator-group -->
+        <ul class="d-flex list-unstyled justify-content-end mt-12">
+          <li>
+            <a class="btn btn-outline-success rounded-0" href="#"
+              ><span class="material-symbols-outlined align-bottom">
+                chevron_left
+              </span></a
+            >
+          </li>
+          <li>
+            <a class="btn btn-outline-success rounded-0 active" href="#">1</a>
+          </li>
+          <li><a class="btn btn-outline-success rounded-0" href="#">2</a></li>
+          <li><a class="btn btn-outline-success rounded-0" href="#">3</a></li>
+          <li>
+            <a class="btn btn-outline-success rounded-0" href="#"
+              ><span class="material-symbols-outlined align-bottom">
+                chevron_right
+              </span></a
+            >
+          </li>
+        </ul>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <!-- Add New Admin Modal -->
+    <div
+      class="modal fade"
+      id="add-new-admin-Modal"
+      tabindex="-1"
+      aria-labelledby="add-new-admin-Modal-Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <!-- New Admin -->
+          <div class="modal-header border-bottom-0">
+            <h2 class="modal-title fs-4 fw-bold" id="add-new-admin-Modal-Label">
+              New Admin
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- Account -->
+          <div class="modal-body d-flex flex-column">
+            <form action="admin.html">
+              <h4 class="fs-5 mb-4">Account</h4>
+              <!-- Name -->
+              <section class="mb-4">
+                <label for="name" class="form-label fs-sm">Name</label>
+                <input type="text" class="form-control" id="name" name="name" />
+              </section>
+              <!-- Email -->
+              <section class="mb-6">
+                <label for="e-mail" class="form-label fs-sm">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="e-mail"
+                  name="e-mail"
+                />
+              </section>
+
+              <hr />
+              <!-- Verification -->
+              <section class="d-flex flex-column mt-6 mb-6">
+                <h4 class="mb-4">Verification</h4>
+                <p class="mb-4">
+                  <span
+                    class="material-symbols-outlined align-bottom text-danger"
+                  >
+                    report_problem
+                  </span>
+                  Unverified
+                </p>
+                <button class="btn btn-outline-success fw-bold rounded-1 py-4">
+                  Send Verification Mail
+                </button>
+              </section>
+              <hr />
+              <!-- Access Level -->
+              <section class="d-flex flex-column mt-6 mb-6">
+                <label class="mb-4" for="access-level">Access Level</label>
+                <select
+                  class="form-select py-4 px-4 rounded-1"
+                  name="access-level"
+                  id="access-level"
+                  value="access-level"
+                  aria-label="Default access-level"
+                >
+                  <option selected>-Choose access level-</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </section>
+              <hr />
+              <!-- Custom Access -->
+              <section class="mt-6">
+                <h4 class="mb-6">Custom Access</h4>
+                <!-- Lecture -->
+                <div class="mb-6">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Lecture"
+                    id="Lecture"
+                    name="Custom-Access"
+                  />
+                  <label for="Lecture" class="form-check-label">Lecture</label>
+                </div>
+                <!-- Coupon -->
+                <div class="mb-6">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Coupon"
+                    id="Coupon"
+                    name="Custom-Access"
+                  />
+                  <label for="Coupon" class="form-check-label">Coupon</label>
+                </div>
+                <!-- Message -->
+                <div class="mb-6">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Message"
+                    id="Message"
+                    name="Custom-Access"
+                  />
+                  <label for="Message" class="form-check-label">Message</label>
+                </div>
+                <!-- Setting -->
+                <div class="mb-6">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Setting"
+                    id="Setting"
+                    name="Custom-Access"
+                  />
+                  <label for="Setting" class="form-check-label">Setting</label>
+                </div>
+                <!-- Task Menu -->
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Task-Menu"
+                    id="Task-Menu"
+                    name="Custom-Access"
+                  />
+                  <label for="Task-Menu" class="form-check-label"
+                    >Task Menu</label
+                  >
+                </div>
+              </section>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-success rounded-1 px-8"
+              data-bs-dismiss="modal"
+            >
+              Cancle
+            </button>
+            <button type="button" class="btn btn-success rounded-1">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal-visibility -->
+    <div
+      class="modal fade"
+      id="visibility-Modal"
+      tabindex="-1"
+      aria-labelledby="visibilityModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body d-flex flex-column">
+            <button
+              type="button"
+              class="btn-close ms-auto"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <div class="d-flex w-100">
+              <section>
+                <img
+                  class="me-6 object-fit-cover"
+                  src="/week5/assets/emir-3d7a4b39.jpeg"
+                  style="width: 141px; height: 141px"
+                  alt="emir"
+                />
+              </section>
+              <section>
+                <p class="mb-2">#1</p>
+                <p>Admin</p>
+                <p class="fs-4 fw-bold mb-2">Emir Wicks</p>
+                <a
+                  class="fs-sm text-secondary mb-4"
+                  href="mailto:emir.wicks@mail.com"
+                  >emir.wicks@mail.com</a
+                >
+                <div>
+                  <code class="text-dark bg-gray100 py-2 px-4">Verified</code>
+                  <a
+                    class="btn text-success text-end"
+                    data-bs-toggle="collapse"
+                    href="#collapseExample"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                  >
+                    <span class="material-symbols-outlined align-bottom">
+                      keyboard_arrow_down
+                    </span>
+                  </a>
+                </div>
+              </section>
+            </div>
+            <div class="collapse" id="collapseExample">
+              <div class="text-end">
+                <button
+                  type="button"
+                  class="btn btn-outline-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Deactivate
+                </button>
+                <button type="button" class="btn btn-success">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Admin Modal -->
+    <div
+      class="modal fade"
+      id="edit-admin-Modal"
+      tabindex="-1"
+      aria-labelledby="edit-admin-Modal-Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <!-- Edit Admin -->
+          <div class="modal-header border-bottom-0">
+            <h2 class="modal-title fs-4 fw-bold" id="edit-admin-Modal-Label">
+              Edit Admin
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- Account -->
+          <div class="modal-body d-flex flex-column">
+            <form action="admin.html">
+              <h4 class="fs-5 mb-4">Account</h4>
+              <!-- Name -->
+              <section class="mb-4">
+                <label for="name" class="form-label fs-sm">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  value="Emir Wicks"
+                  readonly
+                />
+              </section>
+              <!-- Email -->
+              <section class="mb-6">
+                <label for="e-mail" class="form-label fs-sm">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="e-mail"
+                  name="e-mail"
+                  value="emir.wicks@mail.com"
+                  readonly
+                />
+              </section>
+
+              <hr />
+              <!-- Verification -->
+              <section class="d-flex flex-column mt-6 mb-6">
+                <h4 class="mb-4">Verification</h4>
+                <p class="mb-4">
+                  <span class="material-symbols-outlined align-bottom">
+                    check_circle
+                  </span>
+                  Verified
+                </p>
+                <button
+                  class="btn btn-outline-secondary fw-bold rounded-1 py-4"
+                  disabled
+                >
+                  Send Verification Mail
+                </button>
+              </section>
+              <hr />
+              <!-- Access Level -->
+              <section class="d-flex flex-column mt-6 mb-6">
+                <label class="mb-4" for="access-level">Access Level</label>
+                <select
+                  class="form-select py-4 px-4 rounded-1"
+                  name="access-level"
+                  id="access-level"
+                  value="access-level"
+                >
+                  <option class="text-secondary">-Choose access level-</option>
+                  <option value="Admin" selected>Admin</option>
+                </select>
+              </section>
+              <hr />
+              <!-- Custom Access -->
+              <section class="mt-6">
+                <h4 class="mb-6">Custom Access</h4>
+                <!-- Lecture -->
+                <div class="mb-6">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Lecture"
+                    id="Lecture"
+                    name="Custom-Access"
+                    checked
+                  />
+                  <label for="Lecture" class="form-check-label">Lecture</label>
+                </div>
+                <!-- Coupon -->
+                <div class="mb-6">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Coupon"
+                    id="Coupon"
+                    name="Custom-Access"
+                  />
+                  <label for="Coupon" class="form-check-label">Coupon</label>
+                </div>
+                <!-- Message -->
+                <div class="mb-6">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Message"
+                    id="Message"
+                    name="Custom-Access"
+                  />
+                  <label for="Message" class="form-check-label">Message</label>
+                </div>
+                <!-- Setting -->
+                <div class="mb-6">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Setting"
+                    id="Setting"
+                    name="Custom-Access"
+                  />
+                  <label for="Setting" class="form-check-label">Setting</label>
+                </div>
+                <!-- Task Menu -->
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Task-Menu"
+                    id="Task-Menu"
+                    name="Custom-Access"
+                  />
+                  <label for="Task-Menu" class="form-check-label"
+                    >Task Menu</label
+                  >
+                </div>
+              </section>
+              <hr />
+              <!-- Deactivate Account -->
+              <section class="d-flex flex-column">
+                <h4 class="mb-6">Deactivate Account</h4>
+                <div class="d-flex mb-4">
+                  <span
+                    class="material-symbols-outlined align-bottom text-danger"
+                  >
+                    report_problem
+                  </span>
+                  <p class="text-danger">This cannot be undone!</p>
+                </div>
+                <button class="btn btn-outline-danger fw-bold rounded-1 py-4">
+                  Deactivate This Account
+                </button>
+              </section>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-success rounded-1 px-8"
+              data-bs-dismiss="modal"
+            >
+              Cancle
+            </button>
+            <button type="button" class="btn btn-success rounded-1">
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
