@@ -1,0 +1,9 @@
+.icon-link-hover-success:hover .material-symbols-outlined {
+  color: #198754 !important;
+}
+
+.add-new-admin-hover {
+  &:hover {
+    color: $success;
+  }
+}

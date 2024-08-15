@@ -3,3 +3,34 @@
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
+.logo {
+  width: 150px;
+  height: 40px;
+  background-image: url(../assets/images/logo-ANSWER.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-item {
+  border-left: 4px solid transparent;
+  &:hover {
+    border-color: $success;
+  }
+  &:active {
+    border-color: $success;
+  }
+}
+
+.nav-link {
+  &:hover {
+    color: $success;
+  }
+
+  &:active {
+    color: $success;
+  }
+}
