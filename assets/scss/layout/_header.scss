@@ -7,7 +7,7 @@
 .logo {
   width: 150px;
   height: 40px;
-  background-image: url(../assets/images/logo-ANSWER.svg);
+  background-image: url(/assets/images/logo-ANSWER.svg);
   background-repeat: no-repeat;
   background-size: cover;
   text-indent: 101%;
@@ -18,19 +18,13 @@
 .nav-item {
   border-left: 4px solid transparent;
   &:hover {
-    border-color: $success;
-  }
-  &:active {
+    color: $success;
     border-color: $success;
   }
 }
 
 .nav-link {
   &:hover {
-    color: $success;
-  }
-
-  &:active {
     color: $success;
   }
 }

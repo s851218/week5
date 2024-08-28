@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="d-flex">
-      <%- include('./layout/header'); -%>
+      <%- include('./layout/header', {page: "assignment"}); -%>
 
       <main class="content">
         <!-- header -->
@@ -252,14 +252,16 @@
                       find on letters like g, j, p and q. 　
                     </p>
                     <p class="fs-xs mb-4">You can:</p>
-                    <p class="fs-xs">
-                      • adjust the <code>vertical-align</code> of the image to
-                      position it elsewhere (e.g. the <code> middle </code> ) or
-                      　
-                    </p>
-                    <p class="fs-xs">
-                      • change the <code> display</code> so it isn’t inline.
-                    </p>
+                    <ul>
+                      <li class="fs-xs">
+                        adjust the <code>vertical-align</code> of the image to
+                        position it elsewhere (e.g. the <code> middle </code> )
+                        or 　
+                      </li>
+                      <li class="fs-xs">
+                        change the <code> display</code> so it isn’t inline.
+                      </li>
+                    </ul>
                   </div>
                 </section>
               </div>
